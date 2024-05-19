@@ -1,0 +1,15 @@
+services:
+  listener:
+    build: .
+    ports:
+      - 3000:3000
+    secrets:
+      - source: chat-id
+        target: /app/secrets/chat-id.txt
+      - source: bot-token
+        target: /app/secrets/bot-token.txt
+secrets:
+  chat-id:
+    file: ./secrets/chat-id.txt
+  bot-token:
+    file: ./secrets/bot-token.txt
