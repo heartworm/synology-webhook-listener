@@ -86,7 +86,7 @@ async function sendPhoto(blob: Blob, htmlCaption?: string) {
 type TelegramResponse = {
     ok: boolean;
     description?: string;
-}
+};
 
 async function callTelegramApi(api: string, input: Partial<RequestInit>): Promise<TelegramResponse> {
     log.info({ input }, `Calling telegram API: ${api}`);
