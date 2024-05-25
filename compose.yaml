@@ -8,6 +8,7 @@ services:
         target: /app/secrets/chat-id.txt
       - source: bot-token
         target: /app/secrets/bot-token.txt
+    restart: unless-stopped
 secrets:
   chat-id:
     file: ./secrets/chat-id.txt
